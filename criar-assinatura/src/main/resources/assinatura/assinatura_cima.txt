@@ -1,0 +1,15 @@
+<div>
+	<span style="font-family: Arial; font-size: 12pt;">Atenciosamente,</span>
+</div>
+<div>
+	<br>
+</div>
+<div style="width:650px; height:150px">
+	<div style="width:250px; height:150px; float:left;">
+		<img src="%s" width="240" height="150" />
+	</div>
+	<div style="width:400px; height:150px; float:left;">
+		<table style="border: none; padding: 0cm;">
+			<tbody>
+				<tr>
+					<td style="width:400px; height:150px; font-family: Arial; font-size: 12pt; border: none; padding: 0cm; vertical-align: top;">

@@ -1,0 +1,113 @@
+========== REQUISITOS PARA EXECUTAR O JAR ==========
+
+Java 8 update 311 ou superior
+
+
+========== AMBIENTE DE DESENVOLVIMENTO ==========
+
+IDE: Eclipse Java EE Version: 2021-09 (4.21.0) Build id: 20210910-1417
+
+Maven: 3.8.4
+
+openjdk version "17.0.1" 2021-10-19 LTS
+OpenJDK Runtime Environment Corretto-17.0.1.12.1 (build 17.0.1+12-LTS)
+OpenJDK 64-Bit Server VM Corretto-17.0.1.12.1 (build 17.0.1+12-LTS, mixed mode, sharing)
+
+
+========== O PROJETO ========== 
+
+O criar-assinatura é um pequeno programa para padronizar a assinatura em HTML de contas de e-mail.
+Ele criar uma assinatura em HTML com os dados do usuário e uma imagem.
+
+
+========== FUNCIONAMENTO ==========
+
+Observações:
+  -O programa não aceita nenhum tipo de entrada de dado que não seja CTRL+V
+  -O programa irá copiar o texto que está no seu clipboard e substituí-lo, por isso, se você tiver
+   algo importante no seu clipboard, salve.
+  -Para cada assinatura nova que se deseja criar; os dados do usuário devem ser copiados novamente.
+  -A imagem está em formato paisagem e não pode ser muito desproporcional na relação largura vs altura,
+   pois o html irá tentar preenchar o espaço da imagem com ela.
+  
+Uso:
+  -Abra o programa:
+  -Será solicitado a URL da imagem que será utilizada na assinatura, coloque-a. Exemplo:
+   https://www.dominio.com.br/img/assinatura.jpg
+  -Copie um texto não formatado com os dados do usuário (como o que está dentro da caixa abaixo):
+  
+    |========================================|
+    |                                        |
+    |  Fulano de Tal Ferreira da Silva       |
+    |  Setor venda                           |
+    |  Tel: (xx) 4040-4040                   |
+    |  site: www.dominio.com.br              |
+    |  e-mail: fulanodetal@dominio.com.br    |
+    |                                        |
+    |========================================|
+     
+  -Após copiar o texto; dê CTRL+V dentro do programa. Você verá esse texto dentro dele:
+  
+    |=============================================================================================================================================================|
+    |                                                                                                                                                             |
+    |  <div>                                                                                                                                                      |
+    |      <span style="font-family: Arial; font-size: 12pt;">Atenciosamente,</span>                                                                              |
+    |  </div>                                                                                                                                                     |
+    |  <div>                                                                                                                                                      |
+    |    <br>                                                                                                                                                     |
+    |  </div>                                                                                                                                                     |
+    |  <div style="width:650px; height:150px">                                                                                                                    |
+    |        <div style="width:250px; height:150px; float:left;">                                                                                                 |
+    |            <img src="https://www.labsynth.com.br/assinatura/assinatura_email_fixa.jpg" width="240" height="150" />                                          |
+    |        </div>                                                                                                                                               |
+    |        <div style="width:400px; height:150px; float:left;">                                                                                                 |
+    |            <table style="border: none; padding: 0cm;">                                                                                                      |
+    |                <tbody>                                                                                                                                      |
+    |                    <tr>                                                                                                                                     |
+    |                        <td style="width:400px; height:150px; font-family: Arial; font-size: 12pt; border: none; padding: 0cm; vertical-align: top;">        |
+    |                            Fulano de Tal Ferreira da Silva<br>                                                                                              |
+    |                            Setor venda<br>                                                                                                                  |
+    |                            Tel: (xx) 4040-4040<br>                                                                                                          |
+    |                            site: www.dominio.com.br<br>                                                                                                     |
+    |                            e-mail: fulanodetal@dominio.com.br<br>                                                                                           |
+    |                        </td>                                                                                                                                |
+    |                    </tr>                                                                                                                                    |
+    |               </tbody>                                                                                                                                      |
+    |           </table>                                                                                                                                          |
+    |       </div>                                                                                                                                                |
+    |  </div>                                                                                                                                                     |
+    |                                                                                                                                                             |
+    |=============================================================================================================================================================|
+
+  **NÃO PRECISA DAR CTRL+C, ALÉM DE NÃO FUNCIONAR DENTRO DO PROGRAMA, O TEXTO JÁ ESTARÁ NO SEU CLIPBOARD**  
+  -Agora você pode dar CTRL+V em algum outro lugar e você colará esse HTML.
+  
+  **Não precisa fechar o programa para utilizar ele de novo! Apenas copie um novo texto
+    e dê CTRL+V novamente dentro do programa.
+
+
+========== EXEMPLO DE FUNCIONAMENTO ==========
+
+  -Imagine que existam essas três assinaturas:
+  
+    (1)Fulano de Tal Ferreira da Silva       
+       Setor venda                           
+       Tel: (xx) 4040-4040                   
+       site: www.dominio.com.br              
+       e-mail: fulanodetal@dominio.com.br
+
+    (2)Maria Fuluna de Souza
+       Setor compra                       
+       Tel: (xx) 5050-5050                   
+       site: www.dominio.com.br              
+       e-mail: mariafulana@dominio.com.br
+    
+    (3)Aline de Lima Limeira
+       Setor revenda              
+       Tel: (xx) 6060-6060                   
+       site: www.dominio.com.br              
+       e-mail: alinelima@dominio.com.br
+
+  -Abra o program, copie o texto 1, dê CTRL+V dentro do program e dê CTRL+V da assinatura no e-mail do Fulano
+  -Copie o texto 2, dê CTRL+V dentro do program e dê CTRL+V da assinatura no e-mail da Maria
+  -Copie o texto 3, dê CTRL+V dentro do program e dê CTRL+V da assinatura no e-mail da Aline
